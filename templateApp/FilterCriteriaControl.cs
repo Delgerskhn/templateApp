@@ -115,12 +115,12 @@ namespace templateApp
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            _criteria.DateValue = (dateTimePicker1.Value, dateTimePicker2.Value);
+            _criteria.DateValue = (dateTimePicker1.Value, _criteria.DateValue.Item2);
         }
 
         private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
         {
-            _criteria.DateValue = (dateTimePicker1.Value, dateTimePicker2.Value);
+            _criteria.DateValue = (_criteria.DateValue.Item1, dateTimePicker2.Value);
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
